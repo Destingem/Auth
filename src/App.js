@@ -12,8 +12,14 @@ function App() {
         <Route path='/' exact>
           <HomePage />
         </Route>
+        <Route path="/auth/register">
+        <AuthPage loginOrSign={false}/>
+        </Route>
+        <Route path="/auth/login">
+        <AuthPage loginOrSign={true}/>
+        </Route>
         <Route path='/auth'>
-          <AuthPage />
+          <AuthPage loginOrSign={true} />
         </Route>
         <Route path='/profile'>
           <UserProfile />
